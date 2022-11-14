@@ -4,5 +4,5 @@ COPY package.json /app
 COPY yarn.lock /app
 RUN yarn install 
 COPY . /app 
-CMD npm run develop 
+CMD yarn start 
 EXPOSE 3000
