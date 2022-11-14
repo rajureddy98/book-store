@@ -35,9 +35,11 @@ pipeline {
         }
         stage('docker login and push'){
             steps{
-                sh 'docker login -u=rajureddy98 -p=rajureddy98'
-                sh 'docker tag login:1.0 rajureddy98/login:2.1'
-                sh 'docker push rajureddy98/login:2.1'
+                sh '''
+                    docker login -u=rajureddy98 -p=rajureddy98
+                    docker tag $msname:1.0 rajureddy98/$msname:1.0
+                    docker push rajureddy98/$msname:1.0
+                '''
             }
         }
     }
