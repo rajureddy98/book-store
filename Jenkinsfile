@@ -23,16 +23,5 @@ pipeline {
                 '''
             }
         }
-        stage('deploy with ansible'){
-            steps {
-                ansiblePlaybook(
-                    credentialsId: 'ansible_user',
-                    inventory: '/etc/ansible/hosts', 
-                    playbook: '/opt/ansscripts/copy.yaml',
-                    extraVars   : [
-                      msname: env.msname,
-            ])
-            }
-        }
     }
 }
