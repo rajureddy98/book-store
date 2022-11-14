@@ -23,7 +23,7 @@ pipeline {
                 '''
             }
         }
-        if(Docker build and push required){
+        if(Docker_build_and_push_required){
             stage('docker build'){
                 steps{
                     sh '''
