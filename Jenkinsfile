@@ -25,6 +25,7 @@ pipeline {
         }
         stage('docker build'){
             steps{
+                sh 'cd ${msname}'
                 sh 'docker build -t $msname:1.0 .'
             }    
         }
