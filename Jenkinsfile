@@ -45,5 +45,33 @@ pipeline {
                 }
             }    
         }
+        stage('deploy in ec2'){
+            steps{
+                script{
+                    if(Deploy_ec2.toBoolean()){
+                        build job: 'pipelineA', parameters: [
+                            string(name: 'msname', value: ${msname})
+                        ]
+                    }
+                    else{
+                        echo "deployment in EC2 skipped"
+                    }
+                }
+            }
+        }
+        stage('deploy in k8s'){
+            steps{
+                script{
+                    if(Deploy_k8s.toBoolean()){
+                        build job: 'pipelineA', parameters: [
+                            string(name: 'msname', value: ${msname})
+                        ]
+                    }
+                    else{
+                        echo "deployment in k8s skipped"
+                    }
+                }
+            }
+        }
     }
 }
