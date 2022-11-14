@@ -39,6 +39,9 @@ pipeline {
                             '''
                         }
                     }
+                    else{
+                        echo "skipped docker build & push"
+                    }
                 }
             }    
         }
