@@ -25,8 +25,12 @@ pipeline {
         }
         stage('docker build'){
             steps{
-                sh 'cd ${msname}'
-                sh 'docker build -t $msname:1.0 .'
+                sh '''
+                    cd ${msname}
+                    pwd
+                    ls -latr
+                    docker build -t $msname:1.0 .
+                '''
             }    
         }
         stage('docker login and push'){
