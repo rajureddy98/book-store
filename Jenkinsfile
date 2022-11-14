@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh '''
                     cd ${msname}
-                    mvn clean package
+                    mvn clean install package
                 '''
             }
         }
