@@ -12,7 +12,7 @@ pipeline {
         }
         stage('scm checkout') {
             steps {
-               git 'https://github.com/rajureddy98/web-app.git' 
+               git 'https://github.com/rajureddy98/book-store.git' 
             }
         }
         stage('build-ms'){
