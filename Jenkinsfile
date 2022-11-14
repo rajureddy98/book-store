@@ -27,7 +27,7 @@ pipeline {
             steps{
                 script{
                     if(Docker_build_and_push_required){
-                        stage('executing docker build & push){
+                        stage('executing docker build & push'){
                               sh '''
                                 cd ${msname}
                                 pwd
