@@ -49,7 +49,7 @@ pipeline {
             steps{
                 script{
                     if(Deploy_ec2.toBoolean()){
-                        build job: 'pipelineA', parameters: [
+                        build job: 'book-store-deploy-ec2', parameters: [
                             string(name: 'msname', value: ${msname})
                         ]
                     }
@@ -63,7 +63,7 @@ pipeline {
             steps{
                 script{
                     if(Deploy_k8s.toBoolean()){
-                        build job: 'pipelineA', parameters: [
+                        build job: 'book-store-deploy-ec2', parameters: [
                             string(name: 'msname', value: ${msname})
                         ]
                     }
