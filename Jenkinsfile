@@ -26,7 +26,7 @@ pipeline {
         stage('docker build & push'){
             steps{
                 script{
-                    if(Docker_build_and_push_required){
+                    if(Docker_build_and_push_required.toBoolean()){
                         stage('executing docker build & push'){
                               sh '''
                                 cd ${msname}
