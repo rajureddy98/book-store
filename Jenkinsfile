@@ -50,7 +50,7 @@ pipeline {
                 script{
                     if(Deploy_ec2.toBoolean()){
                         build job: 'book-store-deploy-ec2', parameters: [
-                            string(name: 'microservice', value: ${msname})
+                            string(name: 'microservice', value: "${msname}")
                         ]
                     }
                     else{
