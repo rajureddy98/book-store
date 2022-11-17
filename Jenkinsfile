@@ -63,7 +63,7 @@ pipeline {
             steps{
                 script{
                     if(Deploy_k8s.toBoolean()){
-                        build job: 'book-store-deploy-ec2', parameters: [
+                        build job: 'book-store-deploy-k8s', parameters: [
                             string(name: 'microservice', value: ${msname})
                         ]
                     }
