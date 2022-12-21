@@ -10,6 +10,6 @@ spec:
   - name: "2.0"
     from:
       kind: DockerImage
-      name: rajureddy98/bookstore-api-gateway-service.2.0
+      name: rajureddy98/bookstore-api-gateway-service:2.0
     referencePolicy:
       type: Source
