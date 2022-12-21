@@ -1,0 +1,15 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: api-gateway
+  namespace: rajureddy-konga-dev
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - name: "2.0"
+    from:
+      kind: DockerImage
+      name: rajureddy98/bookstore-api-gateway-service.2.0
+    referencePolicy:
+      type: Source
