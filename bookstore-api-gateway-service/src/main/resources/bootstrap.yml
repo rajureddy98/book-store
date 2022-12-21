@@ -23,7 +23,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${EUREKA_HOST:172.31.27.154:8761}/eureka/
+      defaultZone: https://eureka-rajureddy-konga-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/eureka/
     registerWithEureka: true
     enabled: true #eureka discovery is enabled in this profile
   instance:
