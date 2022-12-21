@@ -32,10 +32,10 @@ pipeline {
                                 cd ${msname}
                                 pwd
                                 ls -latr
-                                docker build -t $msname:1.0 .
+                                docker build -t $msname:2.0 .
                                 docker login -u=rajureddy98 -p=rajureddy98
                                 docker tag $msname:2.0 rajureddy98/$msname:2.0
-                                docker push rajureddy98/$msname:1.0
+                                docker push rajureddy98/$msname:2.0
                             '''
                         }
                     }
