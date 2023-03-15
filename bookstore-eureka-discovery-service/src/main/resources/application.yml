@@ -8,5 +8,4 @@ eureka:
   server:
     waitTimeInMsWhenSyncEmpty: 0    #wait time for subsequent sync
   instance:
-    hostname: https://eureka-rajureddy-konga-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com
-    prefer-ip-address: true
+    prefer-ip-address: false
