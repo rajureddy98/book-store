@@ -23,11 +23,11 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: https://eureka-rajureddy-konga-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/eureka/
+      defaultZone: eureka-service.default.svc.cluster.local
     registerWithEureka: true
     enabled: true #eureka discovery is enabled in this profile
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false
 
 management:
   metrics:
