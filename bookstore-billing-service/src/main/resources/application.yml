@@ -56,9 +56,10 @@ spring:
         format_sql: true
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://isilo.db.elephantsql.com:5432/jnlbqkax?user=jnlbqkax&password=ziL2PJgHVaRBPQpex62uCahDSAPH4odj
-    username: jnlbqkax
-    password: ziL2PJgHVaRBPQpex62uCahDSAPH4odj
+    postgres://mjhsyhru:nxrelRI0yonNUV74go9gpJimDWMhAlTg@peanut.db.elephantsql.com/mjhsyhru
+    url: jdbc:postgresql://peanut.db.elephantsql.com:5432/mjhsyhru?user=mjhsyhrux&password=nxrelRI0yonNUV74go9gpJimDWMhAlTg
+    username: mjhsyhru
+    password: nxrelRI0yonNUV74go9gpJimDWMhAlTg
 ---
 
 spring:
