@@ -8,4 +8,4 @@ COPY target/*.jar catalog-service.jar
 
 COPY ./images /image
 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/catalog-service.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=local","-jar","/catalog-service.jar"]
