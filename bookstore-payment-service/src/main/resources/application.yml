@@ -59,7 +59,7 @@ spring:
         format_sql: true
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgressql://jnlbqkax:ziL2PJgHVaRBPQpex62uCahDSAPH4odj@isilo.db.elephantsql.com/jnlbqkax
+    url: jdbc:postgresql://jnlbqkax:ziL2PJgHVaRBPQpex62uCahDSAPH4odj@isilo.db.elephantsql.com/jnlbqkax
     username: jnlbqkax
     password: ziL2PJgHVaRBPQpex62uCahDSAPH4odj
 
