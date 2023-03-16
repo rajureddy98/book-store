@@ -4,7 +4,6 @@ VOLUME /tmp
 
 ARG JAR_FILE
 
-COPY target/${JAR_FILE} payment-service.jar
+COPY target/*.jar payment-server.jar
 
-
-CMD java -Djava.security.egd=file:/dev/./urandom -jar /payment-service.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=local","-jar","/paymrnt-server.jar"]
