@@ -44,29 +44,24 @@ management:
 spring:
   profiles: local
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    database: h2
-    open-in-view: true
-    hibernate:
-      ddl-auto: none
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-    properties:
+      database-platform: org.hibernate.dialect.PostgreSQL82Dialect
+      database: PostgreSQL
+      open-in-view: true
+      generate-ddl: true
       hibernate:
-        show_sql: true
-        use_sql_comments: true
-        format_sql: true
-  datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:bookstore_db;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false;DB_CLOSE_ON_EXIT=FALSE
-    username: sa
-    password:
-  h2:
-    console:
-      enabled: true
-      settings:
-        web-allow-others: true
-      path: /h2-console
+        ddl-auto: validate
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      properties:
+        hibernate:
+          show_sql: true
+          use_sql_comments: true
+          format_sql: true
+    datasource:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgres://jnlbqkax:ziL2PJgHVaRBPQpex62uCahDSAPH4odj@isilo.db.elephantsql.com/jnlbqkax
+      username: jnlbqkax
+      password: ziL2PJgHVaRBPQpex62uCahDSAPH4odj
 
 ---
 
@@ -97,8 +92,8 @@ spring:
 spring:
   profiles: docker
   jpa:
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-    database: mysql
+    database-platform: org.hibernate.dialect.PostgreSQL82Dialect
+    database: PostgreSQL
     open-in-view: true
     generate-ddl: true
     hibernate:
