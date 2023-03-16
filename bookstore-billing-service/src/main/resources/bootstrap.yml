@@ -23,11 +23,11 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${EUREKA_HOST:172.31.27.154:8761}/eureka/
+      defaultZone: http://a6634027441ae4e658031a67f9836ef4-2087378203.us-west-1.elb.amazonaws.com:8761/eureka/
     registerWithEureka: true
     enabled: true #eureka discovery is enabled in this profile
   instance:
-    prefer-ip-address: false
+    prefer-ip-address: true
 
 management:
   metrics:
