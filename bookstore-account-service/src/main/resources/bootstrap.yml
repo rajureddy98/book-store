@@ -28,6 +28,7 @@ eureka:
     enabled: true #eureka discovery is enabled in this profile
   instance:
     prefer-ip-address: false
+    hostname: localhost
 
 management:
   metrics:
