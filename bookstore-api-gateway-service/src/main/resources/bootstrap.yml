@@ -23,10 +23,11 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: eureka-service.default.svc.cluster.local
+      defaultZone: eureka-service
     registerWithEureka: true
     enabled: true #eureka discovery is enabled in this profile
   instance:
+    hostname: eureka
     prefer-ip-address: false
 
 management:
