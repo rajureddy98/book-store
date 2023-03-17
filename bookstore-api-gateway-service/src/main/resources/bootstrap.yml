@@ -23,7 +23,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: eureka-service
+      defaultZone: http://eureka-service
     registerWithEureka: true
     enabled: true #eureka discovery is enabled in this profile
   instance:
