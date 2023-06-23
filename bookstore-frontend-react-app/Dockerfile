@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package.json /app 
 COPY yarn.lock /app
 RUN yarn install 
-RUN yum install bind
+RUN apt-get install -y net-tools
 COPY . /app 
 CMD yarn start 
 EXPOSE 3000
