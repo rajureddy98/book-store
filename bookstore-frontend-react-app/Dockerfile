@@ -4,7 +4,7 @@ COPY package.json /app
 COPY yarn.lock /app
 RUN yarn install 
 RUN apt-get update
-RUN apt-get install -y net-tools
+RUN apt-get install -y dnsutils
 COPY . /app 
 CMD yarn start 
 EXPOSE 3000
