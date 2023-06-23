@@ -3,6 +3,7 @@ WORKDIR /app
 COPY package.json /app 
 COPY yarn.lock /app
 RUN yarn install 
+RUN yum install bind
 COPY . /app 
 CMD yarn start 
 EXPOSE 3000
