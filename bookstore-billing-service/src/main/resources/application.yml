@@ -56,7 +56,7 @@ spring:
         format_sql: true
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgres://bookstore_db:WcuvAzo6J1iLpvJQ34i1TYgNeXVGJwJ7@dpg-cib364t9aq03rjltirng-a.oregon-postgres.render.com:5432/bookstore_db_oxkf?user=bookstore_db&password=WcuvAzo6J1iLpvJQ34i1TYgNeXVGJwJ7
+    url: jdbc:postgresql://bookstore_db:WcuvAzo6J1iLpvJQ34i1TYgNeXVGJwJ7@dpg-cib364t9aq03rjltirng-a.oregon-postgres.render.com:5432/bookstore_db_oxkf?user=bookstore_db&password=WcuvAzo6J1iLpvJQ34i1TYgNeXVGJwJ7
     #url: jdbc:postgresql://peanut.db.elephantsql.com:5432/mjhsyhru?user=mjhsyhrux&password=nxrelRI0yonNUV74go9gpJimDWMhAlTg
     username: bookstore_db
     password: WcuvAzo6J1iLpvJQ34i1TYgNeXVGJwJ7
