@@ -54,10 +54,10 @@ spring:
         format_sql: true
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://dpg-cg9ke6keooghng1bdo90-a.oregon-postgres.render.com:5432/bookstore_db_ss1o?user=bookstore_db_ss1o_user&password=Q1zedrbUSbtPvlpEvQ8SS04rsbCXin4d
+    url: jdbc:postgresql://dpg-cib364t9aq03rjltirng-a.oregon-postgres.render.com:5432/bookstore_db_oxkf?user=bookstore_db&password=WcuvAzo6J1iLpvJQ34i1TYgNeXVGJwJ7
     #url: jdbc:postgresql://peanut.db.elephantsql.com:5432/mjhsyhru?user=mjhsyhrux&password=nxrelRI0yonNUV74go9gpJimDWMhAlTg
-    username: bookstore_db_ss1o_user
-    password: Q1zedrbUSbtPvlpEvQ8SS04rsbCXin4d
+    username: bookstore_db
+    password: WcuvAzo6J1iLpvJQ34i1TYgNeXVGJwJ7
 
 ---
 
