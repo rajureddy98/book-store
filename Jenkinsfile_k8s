@@ -9,7 +9,7 @@ pipeline {
             steps{
                     sh '''
                     cd ${msname}
-                    kubectl get deployment | grep -q "^${msname} " || kubectl apply-f ${msname}.yaml
+                    kubectl get deployment | grep -q "^${msname} " || kubectl apply -f ${msname}.yaml
                     '''
             }
         }
