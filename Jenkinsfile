@@ -17,14 +17,14 @@ pipeline {
                 sh 'echo ${msname} ,${msversion}'
             }
         }
-        /*stage('build-ms'){
+        stage('build-ms'){
             steps {
                 sh '''
                     cd ${msname}
                     mvn clean install package
                 '''
             }
-        }*/
+        }
         stage('docker build & push'){
             steps{
                 script{
