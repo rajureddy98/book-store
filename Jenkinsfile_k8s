@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
     
@@ -6,9 +5,9 @@ pipeline {
         msname = "${params.microservice}"
     }
     stages {
-        stage('ssh to k8s machine') {
-            steps {
-                
+        stage('ssh'){
+            steps{
+                    sh 'kubectl get pods'
             }
         }
     }
