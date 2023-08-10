@@ -1,1 +1,15 @@
 
+pipeline {
+    agent any
+    
+    environment {
+        msname = "${params.microservice}"
+    }
+    stages {
+        stage('ssh to k8s machine') {
+            steps {
+                
+            }
+        }
+    }
+}
