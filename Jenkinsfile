@@ -13,17 +13,18 @@ pipeline {
         }
         stage('scm checkout') {
             steps {
-               git 'https://github.com/rajureddy98/book-store.git' 
+               git 'https://github.com/rajureddy98/book-store.git'
+                sh 'echo ${msname} ,${msversion}'
             }
         }
-        stage('build-ms'){
+        /*stage('build-ms'){
             steps {
                 sh '''
                     cd ${msname}
                     mvn clean install package
                 '''
             }
-        }
+        }*/
         stage('docker build & push'){
             steps{
                 script{
@@ -65,7 +66,8 @@ pipeline {
                 script{
                     if(Deploy_k8s.toBoolean()){
                         build job: 'book-store-deploy-k8s', parameters: [
-                            string(name: 'microservice', value: "${msname}")
+                            string(name: 'microservice', value: "${msname}"),
+                            string(name: 'version', value: "${msversion}")
                         ]
                     }
                     else{
