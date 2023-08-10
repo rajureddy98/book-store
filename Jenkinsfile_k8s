@@ -5,9 +5,12 @@ pipeline {
         msname = "${params.microservice}"
     }
     stages {
-        stage('ssh'){
+        stage('deploying to kubernetes'){
             steps{
-                    sh 'kubectl get pods'
+                    sh '''
+                    cd ${msname}
+                    kubectl get deployment | grep -q "^${msname} " || kubectl apply-f ${msname}.yaml
+                    '''
             }
         }
     }
