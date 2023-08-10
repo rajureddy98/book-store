@@ -3,6 +3,7 @@ pipeline {
     
     environment {
         msname = "${params.microservice}"
+        msversion="${params.version}"
     }
     stages {
         stage('clean WS') {
