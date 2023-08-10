@@ -3,6 +3,7 @@ pipeline {
     
     environment {
         msname = "${params.microservice}"
+        msversion = "${params.version}"
     }
     stages {
         stage('deploying to kubernetes'){
@@ -10,6 +11,8 @@ pipeline {
                     sh '''
                     cd ${msname}
                     kubectl get deployment | grep -q "^${msname} " || kubectl apply -f ${msname}.yaml
+                    kubectl set image deployment/${msname} ${msname}=rajureddy98/${msname}:${msversion}
+                    kubectl rollout status deployment/${msname} --timeout=5m
                     '''
             }
         }
