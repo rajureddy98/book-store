@@ -21,7 +21,7 @@ spec:
         ports:
           - containerPort: 6001
         imagePullPolicy: Always
-        - env:
+        env:
           - name: JAVA_OPTIONS
             value: "-Dspring.profiles.active=local"
 ---
