@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookstore-billing-service
+  labels: 
+    app: billing
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: billing
+  template:
+    metadata:
+      labels:
+        app: billing
+    spec:
+      containers:
+      - name: bookstore-billing-service
+        image: rajureddy98/bookstore-billing-service:2.0
+        ports:
+          - containerPort: 5001
+        imagePullPolicy: Always
+        env:
+        - name: JAVA_OPTIONS
+          value: "-Dspring.profiles.active=local"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: billing-service
+  labels:
+    app: billing-service
+spec:
+  type: NodePort
+  selector:
+    app: billing
+  ports:
+  - protocol: TCP
+    port: 5001
+    targetPort: 5001
