@@ -61,12 +61,13 @@
       EOF
       sysctl --system
 
-  - name: disable SELinux and swap memory
+  - name: disable SELinux and swap memory and firewall
     shell: |
       sudo setenforce 0
       sudo sed -i ‘s/^SELINUX=enforcing$/SELINUX=permissive/’ /etc/selinux/config
       sudo sed -i '/swap/d' /etc/fstab
       sudo swapoff -a
+      systemctl stop firewalld
       echo 1 > /proc/sys/net/ipv4/ip_forward
       kubeadm reset --force
 
