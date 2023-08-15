@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: front-end
+  name: bookstore-frontend-react-app
   labels:
     app: front-end
 spec:
@@ -15,8 +15,8 @@ spec:
         app: front-end
     spec:
       containers:
-      - name: front-end
-        image: rajureddy98/book-store-ui:1.0
+      - name: bookstore-frontend-react-app
+        image: rajureddy98/bookstore-frontend-react-app:1.0
         ports:
           - containerPort: 3000
         imagePullPolicy: Always
