@@ -12,7 +12,7 @@ pipeline {
                     cd ${msname}
                     kubectl get deployment | grep -q "^${msname} " || kubectl apply -f ${msname}.yaml
                     kubectl set image deployment/${msname} ${msname}=rajureddy98/${msname}:${msversion}
-                    kubectl rollout status deployment/${msname} --timeout=5m
+                    kubectl rollout status deployment/${msname} --timeout=10m
                     '''
             }
         }
