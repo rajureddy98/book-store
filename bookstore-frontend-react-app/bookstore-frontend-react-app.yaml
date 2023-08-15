@@ -30,7 +30,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: front-end
+    app: bookstore-frontend-react-app
   ports:
   - protocol: TCP
     port: 3000
