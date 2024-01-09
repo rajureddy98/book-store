@@ -57,9 +57,9 @@ spring:
     #postgres://bltmfpoo:Zsa0gsSqirnJt4yGqQjYfed1f_Ws2IAP@castor.db.elephantsql.com/bltmfpoo
     #url: jdbc:postgresql://dpg-cib364t9aq03rjltirng-a.oregon-postgres.render.com:5432/bookstore_db_oxkf?user=bookstore_db&password=WcuvAzo6J1iLpvJQ34i1TYgNeXVGJwJ7
     #url: jdbc:postgresql://castor.db.elephantsql.com:5432/bltmfpoo?user=bltmfpoo&password=Zsa0gsSqirnJt4yGqQjYfed1f_Ws2IAP
-    url: jdbc:postgresql://book-store?host=/cloudsql/inbound-byte-403518:us-central1:book-store&sslmode=disable
-    username: book-store
-    password: book-store
+    url: jdbc:postgresql://ep-throbbing-forest-32723453.us-east-2.aws.neon.tech/book-store?user=rajureddy2.konga&password=5qdhElns1SDM
+    username: rajureddy2.konga
+    password: 5qdhElns1SDM
 
 ---
 
