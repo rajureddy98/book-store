@@ -18,7 +18,7 @@ const PaymentScreen = ({ history }) => {
   const [paymentMethodId, setPaymentMethodId] = useState('');
   const [cardNumber, setCardNumber] = useState('4111 1111 1111 1111');
   const [expirationMonth, setExpirationMonth] = useState('10');
-  const [expirationYear, setExpirationYear] = useState('23');
+  const [expirationYear, setExpirationYear] = useState('28');
   const [cvv, setCvv] = useState('123');
   const [message, setMessage] = useState(null);
 
