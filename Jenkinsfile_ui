@@ -9,7 +9,7 @@ pipeline {
         }
         stage('scm checkout') {
             steps {
-               git 'https://github.com/rajureddy98/book-store.git' 
+               git credentialsId: 'github-private', url: 'https://github.com/rajureddy98/book-store.git' 
             }
         }
         stage('build-FE-docker-image and push'){
