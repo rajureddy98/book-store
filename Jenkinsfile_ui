@@ -20,6 +20,7 @@ pipeline {
                     docker tag bookstore-frontend-react-app:1.0 rajureddy98/bookstore-frontend-react-app:1.0
                     docker login -u=rajureddy98 -p=rajureddy98
                     docker push rajureddy98/bookstore-frontend-react-app:1.0
+                    emailext body: 'front-end build success', recipientProviders: [developers()], subject: 'front-end build success', to: 'admin@rajureddy.co'
                 '''
             }
         }
