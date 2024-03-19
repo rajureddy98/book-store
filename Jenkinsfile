@@ -4,6 +4,7 @@ pipeline {
     environment {
         msname = "${params.microservice}"
         msversion="${params.version}"
+        artifact_version = "-0.0.1-SNAPSHOT.jar"
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "34.16.207.200:8081"
@@ -34,7 +35,7 @@ pipeline {
             steps {
                 script {
                     pom = readMavenPom file: "pom.xml";
-                    artifactPath= target/${msname}-0.0.1-SNAPSHOT.jar
+                    artifactPath= target/${msname}${artifact_version}
                     echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
                     nexusArtifactUploader(
                         nexusVersion: NEXUS_VERSION,
