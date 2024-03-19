@@ -36,6 +36,7 @@ pipeline {
                 script {
                     pom = readMavenPom file: "pom.xml";
                     artifactPath= "target/${msname}${artifact_version}"
+                    echo pwd
                     echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
                     nexusArtifactUploader(
                         nexusVersion: NEXUS_VERSION,
