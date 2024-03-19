@@ -8,7 +8,7 @@ pipeline {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "34.16.207.200:8081"
-        NEXUS_REPOSITORY = "book-store/"
+        NEXUS_REPOSITORY = "/repository/book-store/"
         NEXUS_CREDENTIAL_ID = "nexus"
     }
     stages {
