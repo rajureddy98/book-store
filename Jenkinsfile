@@ -35,7 +35,7 @@ pipeline {
             steps {
                 script {
                     pom = readMavenPom file: "pom.xml";
-                    artifactPath= "target/${msname}${artifact_version}"
+                    artifactPath= "workspace/${msname}/target/${msname}${artifact_version}"
                     echo pwd
                     echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
                     nexusArtifactUploader(
