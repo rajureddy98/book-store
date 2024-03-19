@@ -27,7 +27,7 @@ pipeline {
             steps {
                 sh '''
                     cd ${msname}
-                    mvn clean install package deploy
+                    mvn clean install package
                 '''
             }
         }
