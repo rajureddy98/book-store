@@ -1,11 +1,12 @@
 name: my workflow
 on: push
 jobs:
-  build:
+  foo:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
-    - name: Set FOO
-      run: echo "FOO=${{ github.event.inputs.foo }}" >> $GITHUB_ENV
-    - name: Test
-      run: echo $FOO
+      - uses: actions/checkout@v3
+      - run: cat .env >> $GITHUB_ENV
+
+      - name: Use the value
+        run: echo $FOO
