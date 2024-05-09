@@ -43,7 +43,8 @@ jobs:
       - name: disply microservice-name
         run: echo $microservice
       - name: disply microservice-name
-        run: echo ${{ secrets.DOCKERHUB_USERNAME }}
+        run: echo pwd
+             echo ls
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -59,6 +60,7 @@ jobs:
       -
         name: Build and push
         uses: docker/build-push-action@v4
+        
         with:
           context: ./${microservice}
           push: true
