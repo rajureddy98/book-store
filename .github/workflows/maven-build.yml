@@ -42,6 +42,8 @@ jobs:
 
       - name: disply microservice-name
         run: echo $microservice
+      - name: disply microservice-name
+        run: echo ${{ secrets.DOCKERHUB_USERNAME }}
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
