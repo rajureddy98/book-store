@@ -1,6 +1,12 @@
 name: Pass a parameter into a custom action
 description: Receives a parameter and prints it out.
 
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
 inputs:
   custom_param:
     description: Custom input parameter
