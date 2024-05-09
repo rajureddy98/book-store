@@ -1,24 +1,11 @@
-name: Pass a parameter into a custom action
-description: Receives a parameter and prints it out.
-
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
-inputs:
-  custom_param:
-    description: Custom input parameter
-    required: true
-
-runs:
-  using: composite
-  steps:
-    - shell: bash
-      name: Print the parameter value
-      env:
-        custom_param: ${{ inputs.custom_param }}
-      run: |
-        echo 'About to echo the parameter value'
-        echo "$custom_param"
+name: my workflow
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set FOO
+      run: echo "FOO=${{ github.event.inputs.foo }}" >> $GITHUB_ENV
+    - name: Test
+      run: echo $FOO
