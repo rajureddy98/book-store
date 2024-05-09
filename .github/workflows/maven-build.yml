@@ -62,6 +62,6 @@ jobs:
         uses: docker/build-push-action@v4
         
         with:
-          context: ./${microservice}
+          context: ./${{ env.microservice}}
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/microservice:3.0
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.microservice}}:3.0
