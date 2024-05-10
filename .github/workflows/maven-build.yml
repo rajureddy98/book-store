@@ -55,5 +55,5 @@ jobs:
 
     - name: docker buld and push
       working-directory: ${{ env.microservice}}
-      run: docker build -t  ${{ env.microservice}}:3.0 pwd
+      run: docker build -t  ${{ env.microservice}}:3.0 .
         
