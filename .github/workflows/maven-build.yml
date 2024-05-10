@@ -53,7 +53,10 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - run: ls
 
-    - name: docker buld and push
-      working-directory: ${{ env.microservice}}
-      run: docker build -t  ${{ env.microservice}}:3.0 ${{ github.workspace }}
+    -
+        name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.microservice}}:3.0 .
         
