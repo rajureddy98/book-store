@@ -55,8 +55,9 @@ jobs:
 
     -
         name: Build and push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v4
         with:
+          context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.microservice}}:3.0 .
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.microservice}}:3.0
         
