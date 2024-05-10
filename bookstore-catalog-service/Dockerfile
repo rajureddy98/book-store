@@ -4,7 +4,7 @@ VOLUME /tmp
 
 ARG JAR_FILE
 
-COPY target/*.jar catalog-service.jar
+COPY ./target/*.jar catalog-service.jar
 
 COPY ./images /images
 
