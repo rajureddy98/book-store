@@ -4,7 +4,7 @@ VOLUME /tmp
 
 ARG JAR_FILE
 
-COPY /home/runner/work/book-store/book-store/bookstore-catalog-service/*.jar catalog-service.jar
+COPY target/*.jar catalog-service.jar
 
 COPY ./images /images
 
