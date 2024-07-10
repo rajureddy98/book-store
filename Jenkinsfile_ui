@@ -17,7 +17,7 @@ pipeline {
                 sh '''
                     cd bookstore-frontend-react-app
                     docker build -t bookstore-frontend-react-app:4.0 .
-                    docker tag bookstore-frontend-react-app:1.0 rajureddy98/bookstore-frontend-react-app:4.0
+                    docker tag bookstore-frontend-react-app:4.0 rajureddy98/bookstore-frontend-react-app:4.0
                     docker login -u=rajureddy98 -p=rajureddy98
                     docker push rajureddy98/bookstore-frontend-react-app:4.0  
                 '''
