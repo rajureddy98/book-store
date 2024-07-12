@@ -1,4 +1,5 @@
 - hosts: all
+  strategy: free
   tasks:
   - name: update all packages
     become: yes
@@ -9,6 +10,7 @@
     register: upout
     tags: upout
 -  hosts: all
+   strategy: free
    tasks:
    - name: install containerd runtime for kubernetes
      become: yes
@@ -40,6 +42,7 @@
      tags: lsout
 
 - hosts: all
+  strategy: free
   tasks:
   - name: installing kubernetes components
     become: yes
