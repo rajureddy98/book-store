@@ -28,7 +28,7 @@ metadata:
   labels:
     app: bookstore-frontend-react-app
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: bookstore-frontend-react-app
   ports:
