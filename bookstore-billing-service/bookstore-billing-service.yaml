@@ -31,7 +31,7 @@ metadata:
   labels:
     app: billing-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: billing
   ports:
