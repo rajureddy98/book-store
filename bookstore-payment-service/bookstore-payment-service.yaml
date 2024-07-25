@@ -31,7 +31,7 @@ metadata:
   labels:
     app: payment-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: payment
   ports:
