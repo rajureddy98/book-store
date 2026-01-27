@@ -28,4 +28,4 @@ jobs:
         with:
           context: ./bookstore-frontend-react-app
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/bookstore-frontend-react-app:3.0
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/bookstore-frontend-react-app:5.0
